@@ -13,7 +13,7 @@ DATABASE_URL=postgres://postgres:postgres@localhost:5432/phamorder
 ## start docker database with
 
 ```bash
-    docker-compose up -d
+    docker-compose up
 ```
 
 ## run migrations with
