@@ -19,7 +19,7 @@ DATABASE_URL=postgres://postgres:postgres@localhost:5432/phamorder
 ## run migrations with
 
 ```bash
-    diesel migration run
+diesel migration run
 ```
 
 ## start server with
@@ -27,5 +27,5 @@ DATABASE_URL=postgres://postgres:postgres@localhost:5432/phamorder
 the starter app contains a user model
 
 ```bash
-    cargo run
+cargo run
 ```
