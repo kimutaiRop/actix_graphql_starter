@@ -1,0 +1,30 @@
+[package]
+name = "drgz"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4.3.1"
+diesel = {version="2.0.4",features = ["postgres", "chrono", "r2d2"] }
+dotenvy = "0.15.7"
+env_logger = "0.10.0"
+futures = "0.3.28"
+juniper = "0.15.11"
+serde = "1.0.160"
+serde_derive = "1.0.160"
+serde_json = "1.0.96"
+tokio-pg-mapper-derive = "0.2.0"
+tokio-postgres = {version="0.7.8", features=["with-chrono-0_4"]}
+tokio-pg-mapper = "0.2.0"
+deadpool-postgres = "0.10.5"
+slog-async = "2.7.0"
+slog = "2.7.0"
+slog-envlogger = "2.2.0"
+slog-term = "2.9.0"
+argonautica = {version="0.2.0", features=["simd"]}
+actix-cors = "0.6.4"
+r2d2 = "0.8.10"
+deadpool-diesel = {version = "0.4.0", features=["postgres"]}
+url = "2.2.2"
