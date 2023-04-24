@@ -1,13 +1,13 @@
-# actix_graphql_starter
+# actix graphql starter
 
 ## add the following to .env
 
 ```env
-    POSTGRES_USER=postgres
-    POSTGRES_PASSWORD=postgres
-    POSTGRES_DB=phamorder
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=phamorder
 
-    DATABASE_URL=postgres://postgres:postgres@localhost:5432/phamorder
+DATABASE_URL=postgres://postgres:postgres@localhost:5432/phamorder
 ```
 
 ## start docker database with
