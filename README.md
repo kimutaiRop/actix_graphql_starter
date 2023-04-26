@@ -8,6 +8,7 @@ POSTGRES_PASSWORD=postgres
 POSTGRES_DB=phamorder
 
 DATABASE_URL=postgres://postgres:postgres@localhost:5432/phamorder
+ELASTIC_API_KEY=ELASTIC_MAIL_API_KEY
 ```
 
 ## start docker database with
