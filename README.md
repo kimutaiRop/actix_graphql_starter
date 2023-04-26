@@ -8,6 +8,7 @@ POSTGRES_PASSWORD=postgres
 POSTGRES_DB=phamorder
 
 DATABASE_URL=postgres://postgres:postgres@localhost:5432/phamorder
+SECRET_KEY=somesecrertkey
 ELASTIC_API_KEY=ELASTIC_MAIL_API_KEY
 ```
 
