@@ -1,10 +1,14 @@
 mod graphql;
 
-use actix_web::{web::{self, Data}, HttpResponse};
+use actix_web::{
+    web::{self, Data},
+    HttpResponse,
+};
 use diesel::{r2d2::ConnectionManager, PgConnection};
 use graphql::{create_schema, Context, Schema};
 use juniper::http::{graphiql::graphiql_source, GraphQLRequest};
 use r2d2::Pool;
+use tera::Tera;
 
 async fn health() -> HttpResponse {
     HttpResponse::Ok().finish()
@@ -30,10 +34,12 @@ async fn graphql(
     data: web::Json<GraphQLRequest>,
     schema: web::Data<Schema>,
     pool: web::Data<Pool<ConnectionManager<PgConnection>>>,
+    token_auth: crate::middlewares::auth::AuthenticationToken,
+    tera: web::Data<Tera>,
 ) -> HttpResponse {
-    println!("graphql");
     let pool = pool.into_inner();
-    let ctx = Context { pool };
+    let ctx = Context { pool,  token_auth, 
+        tera: tera.into_inner() };
     let value = data.execute(&schema, &ctx).await;
     HttpResponse::Ok()
         .content_type("application/json")

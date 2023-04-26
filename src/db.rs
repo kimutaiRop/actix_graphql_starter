@@ -1,5 +1,4 @@
 use diesel::pg::PgConnection;
-use diesel::prelude::*;
 use diesel::r2d2::ConnectionManager;
 use dotenvy::dotenv;
 use r2d2::Pool;
@@ -13,6 +12,4 @@ pub fn establish_connection() -> Pool<ConnectionManager<PgConnection>> {
     r2d2::Pool::builder()
         .build(migr)
         .expect("Failed to create pool.")
-    //         .get()
-    //         .expect("Failed to get connection from pool.")
 }

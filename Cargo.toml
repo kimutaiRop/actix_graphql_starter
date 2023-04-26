@@ -28,3 +28,11 @@ actix-cors = "0.6.4"
 r2d2 = "0.8.10"
 deadpool-diesel = {version = "0.4.0", features=["postgres"]}
 url = "2.2.2"
+chrono = { version = "0.4.24", features = ["serde"] }
+regex = "1.8.1"
+bcrypt = "0.14.0"
+jsonwebtoken = "8.3.0"
+tera = "*"
+lettre = "*"
+reqwest = "0.11.16"
+
